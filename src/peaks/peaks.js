@@ -31,7 +31,7 @@ query_overpass(query, (err, peaks) => {
     }
   })
 
-  fs.writeFile(__dirname + '/peaks.geojson', JSON.stringify(peaks, null, 4), (err) => {
+  fs.writeFile(__dirname + '/peaks.geojson', JSON.stringify(peaks), (err) => {
     if (err) throw err;
     console.log('finished')
   })
